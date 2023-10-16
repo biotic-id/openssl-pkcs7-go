@@ -1,1 +1,1 @@
-module github.com/biotic-id/openssl-pkcs7-go/interfaces
+module github.com/biotic-id/openssl_pkcs7_go
