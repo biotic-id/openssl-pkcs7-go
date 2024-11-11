@@ -24,7 +24,7 @@ func VerifyPkcs7(ca []byte, signature []byte, data []byte) bool {
 }
 
 func GetPkcs7Attr(signature []byte, attr int) string {
-	val := C.pkcs7_attr(C.CBytes(signature), C.size_t(len(signature)), C.int(attr))
+	val := C.pkcs7_attr(C.CBytes(signature), C.int(len(signature)), C.int(attr))
 	retVal := C.GoString(val)
 	C.free(unsafe.Pointer(val))
 	return retVal
